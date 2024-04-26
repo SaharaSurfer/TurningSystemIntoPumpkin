@@ -29,8 +29,8 @@ int main(int argc, char* argv[]) {
     return 1;
   }
 
-  constexpr size_t kArrSize = 16UL * 1024 * 1024 * 1024;
-  constexpr size_t kPageSize = 4 * 1024;
+  constexpr size_t kArrSize = 16UL * (1 << 30);
+  constexpr size_t kPageSize = 4 * (1 << 10);
 
   const char* mode = argv[1];
   const int delay_ms = std::stoi(argv[2]);
